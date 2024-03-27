@@ -6,6 +6,8 @@ function TableRow(props) {
   const { columns, row, tableWidth, rowHeight } = props;
   // row should be an object with keys for each column here;
   // columns should be an array
+
+  console.log(columns);
   return (
     <div
       className="table-row"
@@ -28,7 +30,7 @@ function TableRow(props) {
             );
           } else {
             return (
-              <div  key={idx} style={{ overflow: 'hidden', flex: '1' }}>
+              <div key={idx} style={{ overflow: 'hidden', flex: '1' }}>
                 <TableInnerSquare
                   innerData={row[property]}
                   rowHeight={rowHeight}
